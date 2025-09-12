@@ -21,4 +21,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: bash -c '[ $((RANDOM % 2)) -eq 0 ] && echo "Hello World"'
+        run: bash -c '[ $((RANDOM % 2)) -eq 0 ] && echo "Hello World" || { echo "Flake"; exit 1; }'
